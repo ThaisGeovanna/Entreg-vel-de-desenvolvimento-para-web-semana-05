@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos, Dados e Assincronismo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+    section {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 25px;
+    }
+    input, button {
+      padding: 8px;
+      margin: 4px 0;
+    }
+    .status {
+      min-height: 20px;
+      font-weight: bold;
+    }
+    .status.erro {
+      color: crimson;
+    }
+    .status.vazio {
+      color: darkorange;
+    }
+    dt {
+      font-weight: bold;
+      margin-top: 6px;
+    }
+    dd {
+      margin-left: 0;
+    }
+    #resultado-pokemon img {
+      width: 120px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Objetos, Dados e Assincronismo</h1>
+  <p>Abra o Console (F12) para ver os resultados da Parte 1.</p>
+
+  <section>
+    <h2>Buscador de CEP</h2>
+    <form id="form-cep">
+      <input type="text" id="cep" placeholder="Digite o CEP (8 números)">
+      <button type="submit" id="btn-cep">Buscar</button>
+    </form>
+    <p id="status-cep" class="status"></p>
+    <dl id="resultado-cep"></dl>
+
+    <h3>Histórico de CEPs</h3>
+    <ul id="historico-cep"></ul>
+  </section>
+
+  <section>
+    <h2>Mini Pokédex</h2>
+    <form id="form-pokemon">
+      <input type="text" id="pokemon" placeholder="Nome do Pokémon">
+      <button type="submit" id="btn-pokemon">Buscar</button>
+    </form>
+    <p id="status-pokemon" class="status"></p>
+    <div id="resultado-pokemon"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
